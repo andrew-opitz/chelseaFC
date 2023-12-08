@@ -33,7 +33,6 @@ app.use('/', [view_routes, post_routes])
 
 app.use('/auth', user_routes)
 
-db.sync({ force: false })
-  .then(() => {
-    app.listen(PORT, () => console.log('Server is running on port', PORT))
-  })
+db.on('open', () => {
+  app.listen(PORT, () => console.log('Server started on Port ', PORT))
+})
