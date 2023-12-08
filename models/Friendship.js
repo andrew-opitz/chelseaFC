@@ -1,20 +1,21 @@
 const mongoose = require('mongoose')
 const { model, Schema } = require('mongoose')
 
-const commentSchema = new Schema({
-    user: {
+const friendshipSchema = new Schema({
+    user1: {
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true,
     },
-    post: {
+    user2: {
         type: Schema.Types.ObjectId,
-        ref: 'Post',
+        ref: 'User',
         required: true,
     },
-    content: {
+    status: {
         type: String,
-        required: true,
+        enum: ['Pending', 'Accepted'],
+        default: 'Pending',
     },
     createdAt: {
         type: Date,
@@ -22,6 +23,6 @@ const commentSchema = new Schema({
     },
 })
 
-const Comment = model('Comment', commentSchema)
+const Friendship = model('Friendship', friendshipSchema)
 
-module.exports = Comment
+module.exports = Friendship

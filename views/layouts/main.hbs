@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chelsea F.C. Blog</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <h3>Chelsea F.C. Blog</h3>
+        </a>
+
+        <nav>
+            {{#if user}}
+            <p>Welcome, {{user.username}}</p>
+            <a href="/post">Make a Post</a>
+            <a href="/auth/logout">Log Out</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/">Home</a>
+            {{else}}
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/register">Register</a>
+            <a href="/login">Log in</a>
+            {{/if}}
+        </nav>
+    </header>
+
+
+    {{{body}}}
+</body>
+
+</html>
