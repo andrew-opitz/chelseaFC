@@ -1,0 +1,41 @@
+* {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #034694;
+    color: #FFF;
+    padding: 10px;
+    /* #ED1C24 red*/
+    /* #D1D3D4 light grey */
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h3 {
+    text-decoration: underline #DBA111;
+}
+
+header nav a {
+    color: #FFF;
+}
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #FFF;
+    margin-left: 15px; 
+    text-decoration: none;
+    
+}
+
+nav p {
+    margin-right: 15px; 
+}
+body {
+    background-color: #D1D3D4;
+}
